@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -22,7 +24,6 @@ class _AuthScreenState extends State<AuthScreen> {
   void _submitingAuthForm(String? userName, String? userEmail, String? password,
       bool isLogin, BuildContext ctx, File? userImage) async {
     UserCredential userResult;
-    print('submiting');
     try {
       setState(() {
         isLoading = true;
@@ -72,7 +73,6 @@ class _AuthScreenState extends State<AuthScreen> {
         ),
       );
     } catch (err) {
-      print(err.toString());
       setState(() {
         isLoading = false;
       });

@@ -1,11 +1,11 @@
-// ignore_for_file: deprecated_member_use
+// ignore_for_file: deprecated_member_use, library_private_types_in_public_api
 
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class Photos extends StatefulWidget {
-  Photos(this.getImage);
+  const Photos(this.getImage, {Key? key}) : super(key: key);
   final void Function(File image) getImage;
   @override
   _PhotosState createState() => _PhotosState();

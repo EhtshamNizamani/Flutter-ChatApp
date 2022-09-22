@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_typing_uninitialized_variables, must_be_immutable
+// ignore_for_file: prefer_typing_uninitialized_variables, must_be_immutable, deprecated_member_use
 
 import 'dart:io';
 
@@ -24,7 +24,6 @@ class _AuthFormState extends State<AuthForm> {
   var _userPassword;
   File? _userImage;
   void _pickedImage(File? image) {
-    print('in picked images');
     _userImage = image;
   }
 
@@ -46,7 +45,6 @@ class _AuthFormState extends State<AuthForm> {
       _formKey.currentState!.save();
       widget.submit(
           _userName, _userEmail, _userPassword, _isLogin, context, _userImage);
-      print('object');
     }
   }
 
